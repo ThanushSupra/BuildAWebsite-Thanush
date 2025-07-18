@@ -1,0 +1,908 @@
+/*
+Name: Thanushkanth Supramaniam
+Student ID: 1353841
+Date: April 4th, 2025
+
+
+Where I learned certain untaught CSS elements/code so I can implement it into my website in my own way:
+
+Keyframes: https://www.youtube.com/watch?v=u_GIT5MJAtc&ab_channel=BroCode 
+Animation: https://www.youtube.com/watch?v=z2LQYsZhsFw&ab_channel=Coding2GO 
+Display Types: https://www.youtube.com/watch?v=21ES7AnqkrA&t=694s&ab_channel=developedbyed 
+Grid Display Type: https://www.youtube.com/watch?v=EiNiSFIPIQE&ab_channel=SlayingTheDragon 
+Overflow: https://www.youtube.com/watch?v=6m3ZmlgfZlA&ab_channel=WebDevSimplified 
+CSS Combinators: https://www.youtube.com/watch?v=swZFmJsU54s&ab_channel=BroCode 
+
+
+
+This is all the stuff I had additionally learned to use for this website. Anything else that I used was either relearned from the given course material
+or from my time a while back when I self-learned HTML,CSS, and Javascript from this free online course: https://www.youtube.com/watch?v=nu_pCVPKzTk
+
+
+Thank you :)
+*/
+
+
+/* =======================================
+   Styles (All Pages)
+   - Resets margins, padding, and sets box-sizing for all elements.
+   - Enables smooth scrolling for in-page anchor links.
+======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fefefe;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =======================================
+   Text and headers (All Pages)
+   - Sets default font-weight and margin for headings.
+   - Sets bottom margin for paragraph elements.
+======================================= */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* =======================================
+   Global Headings (All Pages)
+   - Styles for site and page titles.
+   - Includes animations for a fade-in effect.
+======================================= */
+.site-title,
+.page-title {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    animation: fadeInDown 1.2s ease forwards;  /* Fades in from above */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease forwards;  /* Fades in from below */
+}
+
+/* =======================================
+   Header & Navigation (All Pages)
+   - Styles the header and navigation bar used on every page.
+======================================= */
+.main-header,
+.page-header {
+    background: linear-gradient(120deg, #8c0e2e, #2e1b47);  /* Gradient background */
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header {
+    text-align: center; /* Ensures content in main header is centered */
+}
+
+/* Logo container for header */
+.logo-container {
+    margin-bottom: 1rem;
+}
+
+.logo-container img {
+    max-height: 100px;  /* Constrains logo size */
+    display: inline-block;
+    animation: fadeInUp 1.2s ease forwards;  /* Animates logo on load */
+}
+
+/* Footer logo styling (if used in footer) */
+.footer-logo img {
+    max-height: 100px;
+    display: block;
+}
+
+.footer-logo {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+/* =======================================
+   Navigation Menu (All Pages)
+   - Styles the global navigation bar.
+======================================= */
+.main-nav {
+    background: #f0f0f0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.main-nav li {
+    margin: 0 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    padding: 0.75rem 0;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #8c0e2e;  /* Changes link color on hover */
+}
+
+.main-nav a.active {
+    color: #8c0e2e;
+    border-bottom: 2px solid #8c0e2e;  /* Highlights active link */
+}
+
+/* =======================================
+   Hero Section (Home Page)
+   - Big banner section with background image and introductory text.
+======================================= */
+.hero {
+    background: linear-gradient(rgba(140, 14, 46, 0.6), rgba(46, 27, 71, 0.6)),
+                url("https://via.placeholder.com/1920x1080") center/cover no-repeat;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 1.6s ease forwards;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* =======================================
+   Global Buttons (All Pages)
+   - Styles for all clickable buttons.
+======================================= */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #8c0e2e;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #a00d34;
+    transform: translateY(-2px);  /* Slight lift on hover */
+}
+
+.btn-secondary {
+    background: #2e1b47;
+}
+
+.btn-secondary:hover {
+    background: #412661;
+}
+
+/* =======================================
+   Featured Cards Section (Home Page)
+   - Layout for the highlighted features on the Home page.
+======================================= */
+.featured-section {
+    padding: 3rem 1rem;
+    background: #fafafa;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card image container */
+.featured-card .card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card images take full space and are cropped to cover */
+.featured-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card content styling */
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.card-link {
+    color: #8c0e2e;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: #a00d34;
+}
+
+/* =======================================
+   Global Sections (Used on Multiple Pages)
+   - Provides uniform padding for each section.
+======================================= */
+section {
+    padding: 3rem 1rem;
+}
+
+/* =======================================
+   Memorable Matches Section
+   - Used on the Home page to display memorable match highlights.
+======================================= */
+.memorable-matches {
+    background: #f7f7f7;
+    padding: 4rem 1rem;
+}
+
+/* =======================================
+   Match Slider Layout
+   - Layout for sliding match cards with image and details.
+======================================= */
+.match-slider .match-slide {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 0;
+    overflow: hidden;
+}
+
+.match-slider .match-slide .match-image {
+    flex: 1 1 400px;
+    max-width: 500px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.match-slider .match-slide .match-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.match-slider .match-slide .match-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Match details styling */
+.match-slider .match-slide .match-details {
+    flex: 1 1 400px;
+    padding: 2rem;
+}
+
+.match-details h3 {
+    color: #8c0e2e;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.match-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.match-score {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2e1b47;
+    margin-bottom: 1rem;
+}
+
+.match-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* =======================================
+   Footer (All Pages)
+   - Global footer styling with a grid layout.
+======================================= */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ddd;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social-icon {
+    background: #fff;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #ccc;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #aaa;
+}
+
+/* =======================================
+   Global Animations
+   - Fade-in animations for smooth element entrance.
+======================================= */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =======================================
+   Error Page Styles
+   - Styles for the 404 error page.
+======================================= */
+.error-page {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.error-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+.error-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8c0e2e;
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-size: 4rem;
+    color: #8c0e2e;
+    margin-bottom: 0.5rem;
+}
+
+.error-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.error-pitch {
+    margin: 1rem 0;
+}
+
+.pitch-lines {
+    background: #ccc;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.player-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background: #8c0e2e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-message {
+    margin: 1rem 0;
+}
+
+.error-help h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.error-help ul {
+    list-style: disc inside;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.error-help ul li {
+    margin-bottom: 0.5rem;
+}
+
+.error-contact {
+    margin: 1rem 0;
+}
+
+.error-contact p {
+    margin-bottom: 1rem;
+}
+
+.error-btn {
+    margin-top: 1rem;
+}
+
+/* =======================================
+   Page-Specific Tweaks (History & Achievements Page)
+   - Styles for the Introduction and Timeline sections.
+======================================= */
+.history-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.history-image {
+    flex: 1 1 500px;
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.history-text {
+    flex: 2 1 500px;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #8c0e2e, #2e1b47);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 100px;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    background: #8c0e2e;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content .timeline-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.timeline-image {
+    margin-bottom: 10px;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+/* =======================================
+   Player Cards (Legendary Players Page)
+   - Styles for the grid of legendary player cards.
+======================================= */
+.legends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.legend-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.legend-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =======================================
+   Future Stars & Youth Cards (Legendary Players Page)
+   - Styles for the grid of youth player cards.
+======================================= */
+.youth-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.youth-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.youth-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =======================================
+   Spotlight Container Styles (Legendary Players Page)
+   - Container for the spotlight section (e.g., Messi spotlight).
+======================================= */
+.spotlight-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+/* Image container for spotlight images */
+.spotlight-image {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+/* Content container for spotlight text */
+.spotlight-content {
+    flex: 2 1 500px;
+    padding: 2rem;
+}
+
+/* =======================================
+   Player Stats Styling
+   - Styles for the stats display in spotlight sections.
+======================================= */
+.player-stats {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Stats text alignment */
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8c0e2e;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.player-years, .player-appearances {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* =======================================
+   Additional Layout for "Image Left, Text Right"
+   - Used only in Messi and Lamine Yamal sections on Legendary Players Page.
+======================================= */
+.image-left { 
+    height: 100%;
+    /* This container holds the image that appears on the left of the text */
+}
+
+/* Wrapper for Messi spotlight to arrange image and text side by side */
+.legend-spotlight-wrap {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Wrapper for Lamine Yamal section to arrange image and text side by side */
+.future-stars-wrap {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* =======================================
+   Future Stars Section (Legendary Players Page)
+   - Styles for the emerging talents section.
+======================================= */
+.future-stars {
+    padding: 3rem 1rem;
+    background: #fff;
+    display: block;  /* Overrides flex if previously set globally */
+}
+
+.future-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.future-image {
+    flex: 1 1 400px;
+}
+
+.future-content {
+    flex: 2 1 500px;
+    padding: 2rem;
+}
+
+.youth-showcase {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.youth-showcase h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/*
+    This > (child combinator) is used to apply styles only to 
+    immediate child <p> elements of .youth-showcase. In other words, 
+    .youth-showcase > p targets paragraphs that are directly inside 
+    .youth-showcase, ignoring any nested elements deeper in the DOM.
+    I use it here because I only want these styling properties to 
+    affect the direct <p> tags in this specific container, and 
+    not paragraphs that appear in other parts of the website. 
+*/
+.youth-showcase > p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* =======================================
+   - Specific styles for the Memorable Matches page.
+======================================= */
+
+/* Container for the entire Memorable Matches section */
+.memorable-matches-full {
+    background: #f7f7f7;  /* Consistent background as used elsewhere */
+    padding: 3rem 1rem;   /* Consistent spacing */
+}
+
+/* Grid layout for match cards */
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Layout for each match card */
+.match-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for match header and date */
+.match-header h3 {
+    margin-bottom: 0.5rem;
+    color: #8c0e2e;
+    font-size: 1.25rem;
+}
+
+.match-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+/* Styling for match score */
+.match-score {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2e1b47;
+    margin-bottom: 1rem;
+}
+
+/* Styling for match description paragraphs */
+.match-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}

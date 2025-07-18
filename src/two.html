@@ -1,0 +1,287 @@
+<!--
+Name: Thanushkanth Supramaniam
+Student ID: 1353841
+Date: April 4th, 2025
+-->
+
+
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Specifies the language of the document as English -->
+<head>
+    <!-- 
+        The <head> section contains metadata about the document,
+        such as character encoding, viewport settings for responsiveness,
+        the title, and links to external resources like CSS.
+    -->
+    <meta charset="UTF-8"> <!-- Defines the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width"> <!-- Ensures proper rendering on mobile devices -->
+    <title>FC Barcelona - Legendary Players</title> <!-- Title displayed in the browser tab -->
+    <link rel="stylesheet" href="./webstyle.css"> <!-- Links an external CSS stylesheet named "webstyle.css" -->
+</head>
+<body>
+    <!-- 
+        The <body> contains all the visible page content,
+        including headers, navigation, main sections, and footers.
+    -->
+    
+    <!-- Header Section with a specialized class for player pages -->
+    <header class="page-header players-header">
+        <div class="logo-container"> <!-- Container for the club logo -->
+            <a href="https://en.wikipedia.org/wiki/FC_Barcelona" target="_blank">
+                <!-- Logo is clickable and opens FC Barcelona's Wikipedia page in a new tab -->
+                <img src="../assets/logo.png" alt="FC Barcelona Logo"> <!-- Displays the club logo -->
+            </a>
+        </div>
+        <h1 class="page-title">Legendary Players</h1> <!-- Main heading for the page -->
+        <p class="page-subtitle">The Icons Who Defined Barça</p> <!-- Short descriptive subtitle -->
+    </header>
+
+    <!-- Main Navigation Menu -->
+    <nav class="main-nav">
+        <ul>
+            <!-- Each <li> element holds a link to a different page in the site -->
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./one.html">History & Achievements</a></li>
+            <li><a href="./two.html" class="active">Legendary Players</a></li>
+            <li><a href="./three.html">Match Highlights</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ==================================
+             Lionel Messi Spotlight
+        ================================== -->
+        <section class="legend-spotlight">
+            <h2 class="section-title">The Greatest of All Time</h2>
+            
+            <!-- This wrapper contains Messi's image and descriptive text side by side -->
+            <div class="legend-spotlight-wrap">
+                <div class="image-left">
+                    <!-- Clicking the image takes the user to Lionel Messi's Wikipedia article -->
+                    <a href="https://en.wikipedia.org/wiki/Lionel_Messi" target="_blank">
+                        <img src="../assets/messi.jpg" alt="Lionel Messi" style="width:100%; margin-top: 125px">
+                        <!-- Inline styles set the image width to 100% and add top margin -->
+                    </a>
+                </div>
+
+                <!-- Spotlight card containing key details about Messi -->
+                <div class="spotlight-container featured-card">
+                    <div class="card-content spotlight-content">
+                        <h3>Lionel Messi</h3>
+                        <p class="player-years">2004-2021</p>
+                        <!-- Displays Messi's years at FC Barcelona -->
+                        <div class="player-stats">
+                            <!-- A small stats section showing appearances, goals, and trophies -->
+                            <div class="stat">
+                                <span class="stat-number">778</span>
+                                <span class="stat-label">Appearances</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">672</span>
+                                <span class="stat-label">Goals</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">35</span>
+                                <span class="stat-label">Trophies</span>
+                            </div>
+                        </div>
+                        <!-- Messi's story and impact at FC Barcelona -->
+                        <p>Arguably the greatest player in the club's history, Lionel Messi's journey with FC Barcelona began when he joined La Masia at the age of 13. Over 17 seasons with the first team, Messi made 778 appearances and scored 672 goals, making him the club's all-time leading scorer.</p>
+
+                        <p>His accolades include six Ballon d'Or awards during his time at Barça, and he played a pivotal role in securing numerous titles, including four Champions League trophies and ten La Liga titles. Messi's dribbling, vision, and goal-scoring prowess have left an indelible mark on football history.</p>
+
+                        <p>Beyond the statistics, Messi's influence on Barcelona's style of play and global popularity cannot be overstated. His ability to change games single-handedly while maintaining a team-first approach embodied the club's values and elevated Barcelona to unprecedented heights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================
+             The Golden Generation
+        ================================== -->
+        <section class="legendary-era">
+            <h2 class="section-title">The Golden Generation</h2>
+            
+            <div class="era-intro">
+                <!-- Brief introduction about the club's golden era under Pep Guardiola -->
+                <p>The late 2000s and early 2010s marked an extraordinary period in FC Barcelona's history, characterized by a core group of homegrown talents who revolutionized football. Under the guidance of Pep Guardiola, this golden generation dominated both Spanish and European football with their distinctive tiki-taka style.</p>
+            </div>
+            
+            <!-- Grid layout to display multiple legend cards -->
+            <div class="legends-grid">
+
+                <!-- Xavi Card -->
+                <div class="legend-card">
+                    <div class="card-image legend-image">
+                        <!-- Clicking the image leads to Xavi's Wikipedia page in a new tab -->
+                        <a href="https://en.wikipedia.org/wiki/Xavi_%28footballer,_born_1980%29" target="_blank">
+                            <img src="../assets/xavi.jpg" alt="Xavi Hernadez" 
+                                style="width:100%; height:220px; object-fit:cover; border-radius:8px;">
+                            <!-- Inline styles control the size, cropping, and border radius of the image -->
+                        </a>
+                    </div>
+                    <div class="legend-content">
+                        <h3>Xavi Hernández</h3> <!-- Name of the player -->
+                        <p class="player-years">1998-2015</p> <!-- Years spent at the club -->
+                        <p class="player-appearances">767 Appearances</p> <!-- Number of matches played -->
+                        <p>The team's metronome, dictating the tempo with his precise passing. Xavi epitomized Barcelona's tiki-taka style of play and was the conductor who orchestrated the team's fluid attacking movements.</p>
+                        <p>His vision, positional awareness, and ability to maintain possession under pressure made him the ideal embodiment of Barcelona's footballing philosophy. Xavi won 25 major trophies with the club, including 8 La Liga titles and 4 Champions League trophies.</p>
+                    </div>
+                </div>
+                
+                <!-- Iniesta Card -->
+                <div class="legend-card">
+                    <div class="card-image legend-image">
+                        <!-- Clicking the image leads to Iniesta's Wikipedia page in a new tab -->
+                        <a href="https://en.wikipedia.org/wiki/Andr%C3%A9s_Iniesta" target="_blank">
+                            <img src="../assets/iniesta.jpg" alt="Andres Iniesta" 
+                                style="width:100%; height:220px; object-fit:cover; border-radius:8px;">
+                            <!-- Similar inline styling for consistency -->
+                        </a>
+                    </div>
+                    <div class="legend-content">
+                        <h3>Andrés Iniesta</h3> <!-- Player name -->
+                        <p class="player-years">2002-2018</p> <!-- Years at Barcelona -->
+                        <p class="player-appearances">674 Appearances</p> <!-- Total number of matches played -->
+                        <p>Known for his agility and creativity, Iniesta made 674 appearances and was instrumental in crucial moments, including scoring the winning goal in the 2009 Champions League semi-final against Chelsea.</p>
+                        <p>Iniesta's elegance on the ball, combined with his tactical intelligence and ability to glide past defenders, made him a fan favorite. His partnership with Xavi in midfield created the foundation for Barcelona's most successful era.</p>
+                    </div>
+                </div>
+                
+                <!-- Puyol Card -->
+                <div class="legend-card">
+                    <div class="card-image legend-image">
+                        <!-- Link to Carles Puyol's Wikipedia page in a new tab -->
+                        <a href="https://en.wikipedia.org/wiki/Carles_Puyol" target="_blank">
+                            <img src="../assets/puyol.jpg" alt="Carles Puyol" 
+                                style="width:100%; height:220px; object-fit:cover; border-radius:8px;">
+                        </a>
+                    </div>
+                    <div class="legend-content">
+                        <h3>Carles Puyol</h3> <!-- Player name -->
+                        <p class="player-years">1999-2014</p> <!-- Tenure at the club -->
+                        <p class="player-appearances">593 Appearances</p> <!-- Matches played -->
+                        <p>The heart and soul of Barcelona's defense for over a decade, Puyol captained the team through its most successful period. His leadership, courage, and unwavering commitment to the club made him a symbol of Barça's fighting spirit.</p>
+                        <p>Despite not being the most technically gifted defender, Puyol's determination, aerial ability, and tactical awareness compensated for any limitations. His passionate celebrations and timely interventions in crucial matches cemented his legendary status.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================
+             Emerging Talents
+        ================================== -->
+        <section class="future-stars">
+            <h2 class="section-title">Emerging Talents</h2>
+
+            <!-- Wrapper for Lamine Yamal content -->
+            <div class="future-stars-wrap">
+                <div class="image-left">
+                    <!-- Clicking the image directs users to Lamine Yamal's Wikipedia page in a new tab -->
+                    <a href="https://en.wikipedia.org/wiki/Lamine_Yamal" target="_blank">
+                        <img src="../assets/lamine.jpg" alt="Lamine Yamal" style="width:100%; margin-top: 50px;">
+                    </a>
+                </div>
+
+                <!-- Featured card for Yamal's profile -->
+                <div class="future-container featured-card">
+                    <div class="card-content future-content">
+                        <h3>Lamine Yamal</h3> <!-- Name of the emerging star -->
+                        <p>A recent product of La Masia, Lamine Yamal has been making headlines for his exceptional performances at just 17 years old. His dribbling skills, vision, and maturity on the field have drawn comparisons to club legends, and he is seen as a potential cornerstone for Barcelona's future.</p>
+                        <p>Yamal's emergence underscores the club's continued commitment to nurturing young talent. Following in the footsteps of previous La Masia graduates like Messi, Xavi, and Iniesta, Yamal represents Barcelona's philosophy of developing players who understand and embody the club's unique style of play.</p>
+                        <p>As Barcelona navigates the challenges of modern football, these emerging talents provide hope and excitement for fans eager to witness the next chapter in the club's illustrious history. Yamal's rapid development and fearless approach to the game suggest that Barcelona's tradition of nurturing homegrown superstars remains alive and well.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section highlighting other upcoming talents from La Masia -->
+            <div class="youth-showcase">
+                <h3>La Masia: The Talent Factory</h3>
+                <p>Barcelona's famed youth academy continues to produce exceptional talents who carry forward the club's traditions and playing philosophy. Here are some of the promising young players currently making their way through the ranks:</p>
+                
+                <div class="youth-grid">
+                    <!-- Gavi Card -->
+                    <div class="youth-card">
+                        <div class="card-image">
+                            <!-- Link to Gavi's Wikipedia page -->
+                            <a href="https://en.wikipedia.org/wiki/Gavi_(footballer)" target="_blank">
+                                <img src="../assets/gavi.jpg" alt="Gavi" 
+                                    style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                                <!-- Inline styling for image size and shape -->
+                            </a>
+                        </div>
+                        <h4>Gavi</h4> <!-- Young player name -->
+                        <p>Midfield maestro combining technical brilliance with fighting spirit</p>
+                    </div>
+                    
+                    <!-- Pedri Card -->
+                    <div class="youth-card">
+                        <div class="card-image">
+                            <a href="https://en.wikipedia.org/wiki/Pedri" target="_blank">
+                                <img src="../assets/pedri.jpg" alt="Pedri" 
+                                    style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                            </a>
+                        </div>
+                        <h4>Pedri</h4> <!-- Young player name -->
+                        <p>Elegant midfielder with exceptional vision and passing ability</p>
+                    </div>
+                    
+                    <!-- Ansu Fati Card -->
+                    <div class="youth-card">
+                        <div class="card-image">
+                            <a href="https://en.wikipedia.org/wiki/Ansu_Fati" target="_blank">
+                                <img src="../assets/fati.jpg" alt="Ansu Fati" 
+                                    style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                            </a>
+                        </div>
+                        <h4>Ansu Fati</h4> <!-- Young player name -->
+                        <p>Electric forward with natural goal-scoring instinct</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- Footer version of the club logo linking to Wikipedia -->
+                <a href="https://en.wikipedia.org/wiki/FC_Barcelona" target="_blank">
+                    <img src="../assets/logo.png" alt="FC Barcelona Logo">
+                </a>
+            </div>            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <!-- Quick navigation links for convenience -->
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./one.html">History & Achievements</a></li>
+                    <li><a href="./two.html">Legendary Players</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <!-- Basic contact details for the club -->
+                <p>C. d'Arístides Maillol, 12, 08028 Barcelona, Spain</p>
+                <p>Email: info@fcbarcelona.com</p>
+                <p>Phone: +34 123 456 789</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <!-- Social media icons linking to official Barça channels in new tabs -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/fcbarcelona/" class="social-icon" target="_blank">FB</a>
+                    <a href="https://x.com/FCBarcelona?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon" target="_blank">TW</a>
+                    <a href="https://www.instagram.com/fcbarcelona/?hl=en" class="social-icon" target="_blank">IG</a>
+                    <a href="https://www.youtube.com/user/fcbarcelona" class="social-icon" target="_blank">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <!-- Disclaimer about the unofficial nature of the site -->
+            <p>&copy; 2025 FC Barcelona Fan Site. This is an unofficial fan site.</p>
+        </div>
+    </footer>
+</body>
+</html>

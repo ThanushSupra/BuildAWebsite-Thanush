@@ -1,0 +1,181 @@
+<!--
+Name: Thanushkanth Supramaniam
+Student ID: 1353841
+Date: April 4th, 2025
+-->
+
+
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Specifies the primary language of the document content as English -->
+<head>
+    <!-- Home Page: Main landing page with hero section and featured highlights -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on mobile devices -->
+    <title>FC Barcelona - Home</title> <!-- Title displayed in the browser tab -->
+    <link rel="stylesheet" href="./webstyle.css"> <!-- Links an external CSS stylesheet named "webstyle.css" -->
+</head>
+<body>
+    <!-- Header: Displays the club logo and site title -->
+    <header class="main-header">
+        <div class="logo-container"> <!-- Container holding the logo and link to Wikipedia -->
+            <a href="https://en.wikipedia.org/wiki/FC_Barcelona" target="_blank">
+                <!-- Clicking the logo opens the FC Barcelona Wikipedia page in a new tab -->
+                <img src="../assets/logo.png" alt="FC Barcelona Logo"> <!-- Club logo image -->
+            </a>
+        </div>
+        <h1 class="site-title">FC BARCELONA</h1> <!-- Main site title -->
+        <p class="site-tagline">More Than A Club</p> <!-- Short tagline for the club -->
+    </header>
+
+    <!-- Navigation: Global navigation menu -->
+    <nav class="main-nav">
+        <ul>
+            <!-- 
+                Each <li> element represents a navigation item.
+                The 'active' class highlights the current page (Home).
+            -->
+            <li><a href="./home.html" class="active">Home</a></li>
+            <li><a href="./one.html">History & Achievements</a></li>
+            <li><a href="./two.html">Legendary Players</a></li>
+            <li><a href="./three.html">Match Highlights</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section: Big introductory banner -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to the World of Barça</h2> <!-- Catchy heading for the hero area -->
+                <p>Experience the passion, history and glory of one of football's greatest institutions</p> <!-- Short descriptive sentence -->
+                <a href="#featured" class="btn">Discover More</a> <!-- Button linking to the featured section -->
+            </div>
+        </section>
+
+        <!-- Featured Section: Highlighting key aspects -->
+        <section id="featured" class="featured-section">
+            <h2 class="section-title">FC Barcelona Highlights</h2> <!-- Section heading -->
+            
+            <div class="featured-grid">
+                <!-- Featured Card: Iconic Stadium -->
+                <div class="featured-card">
+                    <div class="card-image">
+                        <!-- 
+                            Clicking on the image leads to an official FC Barcelona page 
+                            about the Spotify Camp Nou in a new tab.
+                        -->
+                        <a href="https://www.fcbarcelona.com/en/club/facilities/spotify-camp-nou" target="_blank">
+                            <img src="../assets/campnou.jpg" alt="Camp Nou Stadium"> <!-- Image showcasing Camp Nou -->
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>Iconic Stadium</h3> <!-- Title of the featured card -->
+                        <p>Camp Nou stands as a monument to football excellence, hosting legendary matches since 1957</p> <!-- Description -->
+                        <a href="one.html#stadium" class="card-link">Explore Stadium History</a> <!-- Internal link to the stadium section -->
+                    </div>
+                </div>
+
+                <!-- Featured Card: Trophy Cabinet -->
+                <div class="featured-card">
+                    <div class="card-image">
+                        <!-- 
+                            Clicking on the image opens a page about Barcelona's trophy museum in a new tab
+                        -->
+                        <a href="https://www.fcbarcelona.fr/fr/actualites/2475474/the-europa-league-one-of-the-missing-trophies-in-the-fc-barcelona-museum" target="_blank">
+                            <img src="../assets/trophycollection.jpg" alt="Barcelona Trophy Collection">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>Trophy Cabinet</h3> <!-- Title of the featured card -->
+                        <p>With 27 La Liga titles and 5 Champions League trophies, Barcelona's success spans generations</p> <!-- Description -->
+                        <a href="one.html#achievements" class="card-link">View Achievements</a> <!-- Internal link to the achievements section -->
+                    </div>
+                </div>
+
+                <!-- Featured Card: Club Legends -->
+                <div class="featured-card">
+                    <div class="card-image">
+                        <!-- 
+                            Clicking on the image opens an article about Barcelona's team of the decade in a new tab
+                        -->
+                        <a href="https://www.barcablaugranes.com/barcelona-la-liga/2019/12/24/21031658/barcelonas-team-of-the-decade" target="_blank">
+                            <img src="../assets/legends.jpg" alt="Barcelona Legends">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>Club Legends</h3> <!-- Title of the featured card -->
+                        <p>From Messi to Cruyff, Barcelona has been home to some of football's greatest talents</p> <!-- Description -->
+                        <a href="two.html" class="card-link">Meet The Legends</a> <!-- Internal link to the legendary players page -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memorable Matches Section -->
+        <section class="memorable-matches">
+            <h2 class="section-title">Memorable Matches</h2> <!-- Section heading -->
+            <!-- match-slider container used for sliding match cards -->
+            <div class="match-slider">
+                <div class="match-slide">
+                    <div class="match-image">
+                        <!-- 
+                            Image link to an external article on La Remontada.
+                            Opens in a new tab.
+                        -->
+                        <a href="https://hooligan-soccer.com/la-remontada-the-night-barcelona-defied-fate/" target="_blank">
+                            <img src="../assets/laremontada.jpg" alt="The infamous La Remontada Match">
+                        </a>
+                    </div>
+                    <div class="match-details">
+                        <h3>The Comeback: La Remontada</h3> <!-- Match title -->
+                        <p class="match-date">March 8, 2017 | Champions League</p> <!-- Match date and competition -->
+                        <p class="match-score">FC Barcelona 6-1 Paris Saint-Germain</p> <!-- Final score -->
+                        <p class="match-description">The greatest comeback in Champions League history, Barcelona overturned a 4-0 first leg deficit with a dramatic 6-1 victory. Sergi Roberto's 95th-minute winner sent Camp Nou into a frenzy as Barça completed the impossible.</p> <!-- Brief recap of the match -->
+                        <a href="three.html" class="btn">Read More Memorable Matches</a> <!-- Link to more match highlights -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: Global footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- Footer version of the club logo linking to Wikipedia -->
+                <a href="https://en.wikipedia.org/wiki/FC_Barcelona" target="_blank">
+                    <img src="../assets/logo.png" alt="FC Barcelona Logo">
+                </a>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3> <!-- Heading for the footer links section -->
+                <ul>
+                    <!-- Quick link list to key pages of the site -->
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./one.html">History & Achievements</a></li>
+                    <li><a href="./two.html">Legendary Players</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3> <!-- Footer contact section -->
+                <p>C. d'Arístides Maillol, 12, 08028 Barcelona, Spain</p> <!-- Physical address -->
+                <p>Email: info@fcbarcelona.com</p> <!-- Email contact -->
+                <p>Phone: +34 123 456 789</p> <!-- Phone number -->
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3> <!-- Social media links heading -->
+                <div class="social-icons">
+                    <!-- Icons linking to official Barça social media channels in new tabs -->
+                    <a href="https://www.facebook.com/fcbarcelona/" class="social-icon" target="_blank">FB</a>
+                    <a href="https://x.com/FCBarcelona?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon" target="_blank">TW</a>
+                    <a href="https://www.instagram.com/fcbarcelona/?hl=en" class="social-icon" target="_blank">IG</a>
+                    <a href="https://www.youtube.com/user/fcbarcelona" class="social-icon" target="_blank">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <!-- Footer bottom with a disclaimer about this being an unofficial site -->
+            <p>&copy; 2025 FC Barcelona Fan Site. This is an unofficial fan site.</p>
+        </div>
+    </footer>
+</body>
+</html>
